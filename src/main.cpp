@@ -6,13 +6,14 @@
 using namespace std;
 
 string CURRENT_FILE;
-int characters[5000][5000];
+char characters[5000][5000];
 
 int main(int argc, char *argv[]) {
 	// Open file from arguments or go to title screen
 	if (argc == 2) {
 		CURRENT_FILE = argv[1];
 		read_file(CURRENT_FILE);
+		display_current_file();
 	} else if (argc > 2) {
 		cout << "Error: too many arguments." << endl;
 		return 1;
@@ -21,6 +22,7 @@ int main(int argc, char *argv[]) {
 		cout << "File name:";
 		cin >> CURRENT_FILE;
 		read_file(CURRENT_FILE);
+		display_current_file();
 	}
 
 	return 0;
@@ -38,9 +40,23 @@ void read_file(string FILENAME) {
 		for (int i=0; i<text.size(); i++) {
 			characters[line_number][i] = text[i];
 		}
+		// add new line character to the end of each line
+		characters[line_number][text.size()] = '\n';
 		line_number++;
 	}
 
 	// Close the file
 	TextFile.close();
+}
+
+void display_current_file() {
+	for (int i=0; i<5000; i++) {
+		for (int j=0; j<5000; j++) {
+			if (characters[i][j] == '\n') {
+				cout << characters[i][j];
+				break;
+			}
+			cout << characters[i][j];
+		}
+	}
 }
