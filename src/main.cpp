@@ -6,6 +6,7 @@
 using namespace std;
 
 string CURRENT_FILE;
+int characters[5000][5000];
 
 int main(int argc, char *argv[]) {
 	// Open file from arguments or go to title screen
@@ -32,9 +33,14 @@ void read_file(string FILENAME) {
 	ifstream TextFile(FILENAME);
 
 	// read the file line by line
+	int line_number=0;
 	while (getline(TextFile, text)) {
-		cout << text << endl;
+		for (int i=0; i<text.size(); i++) {
+			characters[line_number][i] = text[i];
+		}
+		line_number++;
 	}
 
+	// Close the file
 	TextFile.close();
 }
