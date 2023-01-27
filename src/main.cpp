@@ -156,6 +156,7 @@ void editing_current_file() {
 				refresh();
 				break;
 			case 10:
+				characters[y][x] = '\n';
 				x=0;
 				y++;
 				move(y,x);
@@ -163,15 +164,415 @@ void editing_current_file() {
 				break;
 			case KEY_BACKSPACE:
 				printw(" ");
-				x--;
+				refresh();
 				characters[y][x] = ' ';
+				x--;
 				move(y,x);
 				refresh();
 				break;
-			default:
+			case 'A':
 				characters[y][x] = ch;
+				x++;
+				break;
+			case 'B':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'C':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'D':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'E':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'F':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'G':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'H':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'I':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'J':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'K':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'L':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'M':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'N':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'O':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'P':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'Q':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'R':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'S':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'T':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'U':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'V':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'W':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'X':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'Y':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'Z':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'a':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'b':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'c':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'd':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'e':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'f':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'g':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'h':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'i':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'j':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'k':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'l':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'm':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'n':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'o':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'p':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'q':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'r':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 's':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 't':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'u':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'v':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'w':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'x':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'y':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case 'z':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '0':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '1':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '2':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '3':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '4':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '5':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '6':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '7':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '8':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '9':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '~':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '`':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '!':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '@':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '#':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '$':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '%':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '^':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '&':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '*':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '(':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case ')':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '-':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '_':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '+':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '=':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '\\':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '[':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case ']':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '{':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '}':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '|':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case ';':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '\'':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '\"':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case ',':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '.':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '/':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '<':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '>':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case '?':
+				characters[y][x] = ch;
+				x++;
+				break;
+			case ' ':
+				characters[y][x] = ' ';
+				x++;
 				break;
 		}
 	}
 	// on exit, write and quit or quit
+	exit_file_editing("WRITE", CURRENT_FILE);
+}
+
+void exit_file_editing(string TYPE, string FILENAME) {
+	if (TYPE == "WRITE") {
+		// string to store each line
+		string text;
+		// file to read
+		ofstream TextFile(FILENAME);
+
+		// Write the file line by line.
+		for (int i=0; i<5000; i++) {
+			for (int j=0; j<5000; j++) {
+				if (characters[i][j] == '\n') {
+					text+='\n';
+					break;
+				}
+				text += characters[i][j];
+			}
+			TextFile << text;
+			text = "";
+		}
+
+		// Close the file
+		TextFile.close();
+	}
 }

@@ -22,3 +22,11 @@ void display_current_file();
 */
 
 void editing_current_file();
+
+/*
+* exit_file_editing
+* Exit editing. Expects a TYPE string ("WRITE" for saving the file on exit) and a file name.
+*
+* */
+
+void exit_file_editing(std::string TYPE, std::string FILENAME);
