@@ -4,9 +4,7 @@
 #include <ncurses.h>
 #include "../include/main.h"
 
-using namespace std;
-
-string CURRENT_FILE = "";
+std::string CURRENT_FILE = "";
 char characters[5000][5000];
 
 int main(int argc, char *argv[]) {
@@ -28,7 +26,6 @@ int main(int argc, char *argv[]) {
 
 		move(0,0);
 		refresh();
-		getch();
 
 		// Display current file on screen
 		display_current_file();
@@ -38,7 +35,7 @@ int main(int argc, char *argv[]) {
 		getch();
 		endwin();
 	} else if (argc > 2) {
-		cout << "Error: too many arguments." << endl;
+		std::cout << "Error: too many arguments." << '\n';
 		return 1;
 	} else {
 		int ch;
@@ -74,9 +71,9 @@ int main(int argc, char *argv[]) {
 		}
 
 		read_file(CURRENT_FILE);
-		getch();
+
 		display_current_file();
-		getch();
+
 		//edits the current file
 		editing_current_file();
 		endwin();
@@ -86,11 +83,11 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-void read_file(string FILENAME) {
+void read_file(std::string FILENAME) {
 	// string to store each line
-	string text;
+	std::string text;
 	// file to read
-	ifstream TextFile(FILENAME);
+	std::ifstream TextFile(FILENAME);
 
 	// read the file line by line
 	int line_number=0;
@@ -112,7 +109,6 @@ void display_current_file() {
 	refresh();
 	move(0,0);
 	refresh();
-	getch();
 
 	for (int i=0; i<5000; i++) {
 		for (int j=0; j<5000; j++) {
@@ -166,7 +162,7 @@ void editing_current_file() {
 				printw(" ");
 				refresh();
 				characters[y][x] = ' ';
-				x--;
+				if (x != 0) x--;
 				move(y,x);
 				refresh();
 				break;
@@ -552,12 +548,12 @@ void editing_current_file() {
 	exit_file_editing("WRITE", CURRENT_FILE);
 }
 
-void exit_file_editing(string TYPE, string FILENAME) {
+void exit_file_editing(std::string TYPE, std::string FILENAME) {
 	if (TYPE == "WRITE") {
-		// string to store each line
-		string text;
-		// file to read
-		ofstream TextFile(FILENAME);
+		// String to store each line.
+		std::string text;
+		// File to read.
+		std::ofstream TextFile(FILENAME);
 
 		// Write the file line by line.
 		for (int i=0; i<5000; i++) {
