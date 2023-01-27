@@ -1,11 +1,11 @@
-# Game of Life
+# Simple Text Editor
 
-A [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) implementation written in C.
+A [Simple Text Editor](https://github.com/jibrilfdev/simple-text-editor) written in C++.
 
 ![GIF of game of life](./gifs/glider.gif)
 
 ## Build Dependencies
-gcc <br />
+g++ <br />
 ncurses library
 
 ## Installation
@@ -13,22 +13,20 @@ ncurses library
 Clone the repository locally.
 
 ```bash
-git clone https://github.com/jibrilfdev/game-of-life-c.git
-cd game-of-life-c
-gcc src/main.c -o life -l ncurses
+git clone https://github.com/jibrilfdev/simple-text-editor.git
+cd simple-text-editor
+g++ src/main.cpp -o simple -l ncurses
 ```
 
 ## Usage
 
 ```bash
-./life
+./simple FILENAME
 ```
 
-ENTER on the main screen to go to the seed editor. Press x on a location to toggle the cell's status. Move locations using arrow keys or h, j, k, l. q to quit seed editor, and q to quit simulation loop.
+Run the program with an argument of the file name to edit that file. Run the program with no arguments to go to the title screen first where a file name can then be entered.
 
-![Screenshot of Game of Life title screen.](./screenshots/titlescreen.png)
-
-![Screenshot of Game of Life in the middle of a simulation.](./screenshots/gamestate.png)
+![Screenshot of file written in Simple Text Editor](./screenshots/thisfilewaswrittenusingsimple.png)
 
 ## Contributing
 
