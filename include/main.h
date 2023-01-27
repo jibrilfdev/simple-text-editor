@@ -14,3 +14,11 @@ void read_file(std::string FILENAME);
 */
 
 void display_current_file();
+
+/*
+* editing_current_file
+* logic for editing the current file loaded in memory
+*
+*/
+
+void editing_current_file();

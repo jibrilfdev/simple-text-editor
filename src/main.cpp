@@ -32,6 +32,9 @@ int main(int argc, char *argv[]) {
 
 		// Display current file on screen
 		display_current_file();
+
+		//edit current file
+		editing_current_file();
 		getch();
 		endwin();
 	} else if (argc > 2) {
@@ -74,6 +77,8 @@ int main(int argc, char *argv[]) {
 		getch();
 		display_current_file();
 		getch();
+		//edits the current file
+		editing_current_file();
 		endwin();
 	}
 	endwin();
@@ -119,4 +124,54 @@ void display_current_file() {
 		}
 		refresh();
 	}
+}
+
+void editing_current_file() {
+	// Track cursor location with x and y values
+	int y=0,x=0,ch;
+	move(0,0);
+	// Update value on key press
+	while ((ch = getch()) != ':') {
+		switch (ch) {
+			case KEY_UP:
+				if (y == 0) break;
+				y--;
+				move(y,x);
+				refresh();
+				break;
+			case KEY_DOWN:
+				y++;
+				move(y,x);
+				refresh();
+				break;
+			case KEY_LEFT:
+				if (x == 0) break;
+				x--;
+				move(y,x);
+				refresh();
+				break;
+			case KEY_RIGHT:
+				x++;
+				move(y,x);
+				refresh();
+				break;
+			case 10:
+				x=0;
+				y++;
+				move(y,x);
+				refresh();
+				break;
+			case KEY_BACKSPACE:
+				printw(" ");
+				x--;
+				characters[y][x] = ' ';
+				move(y,x);
+				refresh();
+				break;
+			default:
+				characters[y][x] = ch;
+				break;
+		}
+	}
+	// on exit, write and quit or quit
 }
